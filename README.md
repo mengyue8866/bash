@@ -1,6 +1,13 @@
 *  开头：#!/bin/bash   声明所用的语法，以载入相应环境的配置
+*  命令顺序关系：
+    *  ;  顺序执行，但互不影响
+    *  && 前一个成功执行，后一个才会执行
+    *  |  第一条命令的执行结果作为第二第命令的操作对象
 *  执行：文件有读与执行权限 ./file.sh  或 PATH内  或  bash file.sh 或 sh file.sh   在子进程中执行的
 *  关键字：export  抛出为环境变量   set   unset   exit 0   read  declare  
+*  unset: 取消变量设置  -f/v  函数/变量
+*  set: 设置shell选项，列出变量
+*  变量声明：declare -i/a/f/r  整型/数组/函数/只读   local 局部变量
 *  常用特殊变量：
 	*  $0  当前脚本文件名
 	*  $n  传递给脚本或函数的参数
@@ -72,4 +79,6 @@
 ## 函数
 *  定义：function fname(){}  或 fname(){}
 *  调用：fname  或  fname param1 param2
+## 参数
+*  shift  或 shift n参数变量号码偏移，拿掉前面几个参数。
     
